@@ -9,7 +9,7 @@
     <meta name="robots" content="" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -18,18 +18,49 @@
             <h1>Hey Dr. Watson</h1>
         </div>
 
-        <div id="subtitle" data-scroll-reveal='enter top move 20px'>Whatever you whisper through the internet will float around the cloud forever</div>
+        <div id="subtitle" data-scroll-reveal='enter top ease-in 20px, over 0.4s, wait 0.8s'>Whatever you whisper through the internet will float around the cloud forever</div>
+
+        <div class="column">
+            <img data-scroll-reveal='enter left move 150px, over .9s' src="img/data1.jpeg" alt="">
+            <img data-scroll-reveal='enter left move 150px, over .9s' src="img/data2.jpeg" alt="">
+            <img data-scroll-reveal='enter left move 150px, over .9s' src="img/data5.jpeg" alt="">
+        </div>
+        <div class="column">
+            <img data-scroll-reveal='enter right move 150px, over .9s' src="img/data3.jpeg" alt="">
+            <img data-scroll-reveal='enter right move 150px, over .9s' src="img/data4.jpeg" alt="">
+            <img data-scroll-reveal='enter right move 150px, over .9s' src="img/data6.jpeg" alt="">
+        </div>
+        <div class="column">
+            <img data-scroll-reveal='enter left move 150px, over .9s' src="img/data1.jpeg" alt="">
+            <img data-scroll-reveal='enter left move 150px, over .9s' src="img/data2.jpeg" alt="">
+            <img data-scroll-reveal='enter left move 150px, over .9s' src="img/data5.jpeg" alt="">
+        </div>
+        <div class="column">
+            <img data-scroll-reveal='enter right move 150px, over .9s' src="img/data3.jpeg" alt="">
+            <img data-scroll-reveal='enter right move 150px, over .9s' src="img/data4.jpeg" alt="">
+            <img data-scroll-reveal='enter right move 150px, over .9s' src="img/data6.jpeg" alt="">
+        </div>
+
 
     </div>
 
     <script src='js/scrollReveal.js'></script>
     <script>
-    window.scrollReveal = new scrollReveal();
-    //or
-    window.scrollReveal2 = new scrollReveal({
-        reset: true,
-        elem: document.getElementById('srcontainer')
-    });
+    // The starting defaults.
+    var config = {
+            after: '0s',
+            enter: 'bottom',
+            move: '24px',
+            over: '0.66s',
+            easing: 'ease-in-out',
+            viewportFactor: 0.53,
+            reset: true,
+            init: true
+          };
+
+    window.scrollReveal = new scrollReveal( );
+
+    
     </script>
 </body>
 
