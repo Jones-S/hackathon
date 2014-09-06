@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="block">
+            here is not much
+        </div>
+        <div data-scroll-reveal='enter top'>Foo</div>
+
+    </div>
+
+    <script src='js/scrollReveal.js'></script>
+    <script>
+    window.scrollReveal = new scrollReveal();
+    //or
+    window.scrollReveal2 = new scrollReveal({
+        reset: true,
+        elem: document.getElementById('srcontainer')
+    });
+    </script>
+</body>
+
+</html>
