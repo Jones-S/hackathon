@@ -4,10 +4,13 @@
 	border: 0;
 	font-size: 100%;
 	list-style: none;
-	background-color: #0e0d1d;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body {
+	background-color: #0e0d1d;
 }
 
 #container {
@@ -15,8 +18,8 @@
     margin: 3em auto;
 }
 
-#block {
-    height: 250px;
+#title {
+    height: auto;
     background-color: #ededed;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
