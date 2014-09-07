@@ -19,6 +19,7 @@ h2,
 h3,
 h4 {
    font-weight: 300;
+   font-size: 1.4em;
 }
 
 h1 {
@@ -29,6 +30,15 @@ h1 {
 
 h2 {
     font-size: 18px;
+}
+
+h3 {
+    font-size: 2.3em;
+    font-weight: 500;
+}
+
+p {
+    font-weight: 400;
 }
 
 .noselect * {
@@ -148,6 +158,15 @@ h2 {
     background: #bed4ec;
 }
 
+#parallax {
+    height: 75%;
+    width: 100%;
+    background: url(img/surf.jpg) no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+
+}
+
 #drawsvg {
     height: 100%;
     position: absolute;
@@ -168,3 +187,5 @@ h2 {
         fill: rgba(white, 0);
     }
 }
+
+

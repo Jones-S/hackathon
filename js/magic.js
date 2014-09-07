@@ -1,12 +1,6 @@
 $(document).ready(function() {
 
-    // init the controller
-    var controller = new ScrollMagic({
-        globalSceneOptions: {
-            triggerHook: "onLeave", // could also be a int: 0 - 1, 
-            loglevel: 3,
-        }
-    });
+
 
     function pathPrepare($el) {
         var lineLength = $el[0].getTotalLength();
@@ -18,6 +12,32 @@ $(document).ready(function() {
 
     // prepare SVG
     pathPrepare($svg);
+
+    var parallaxHeight = $("#parallax").height();
+
+    var duration = function () {
+        return parallaxHeight + $(window).height() + 1000;
+    };
+
+    // define params
+    var bgPosMovement = function () {
+        return "0 " + (duration() * -0.4 ) + "px";
+    };
+
+    // init the controller
+    var controller = new ScrollMagic({
+        globalSceneOptions: {
+            triggerHook: "onLeave", // coul5 also be a int: 0 - 1, 
+            loglevel: 3,
+        }
+    });
+
+    var controllerPar = new ScrollMagic({
+        globalSceneOptions: {
+            triggerHook: "onEnter", 
+            duration: duration
+        }
+    });
 
 
     // pinani
@@ -68,7 +88,7 @@ $(document).ready(function() {
         // change color during the whole thing
         .add(TweenMax.to("path", 0.9, {stroke: "#52675d", ease:Linear.easeNone})); 
 
-    // panel section pin
+    // build scenes
     var scene = new ScrollScene({
             triggerElement: "section#pin",
             duration: 1100,
@@ -76,7 +96,15 @@ $(document).ready(function() {
         })
         .setTween(pinani)
         .setPin("section#pin")
-        .addTo(controller);
+        .addTo(controller)
+        .addIndicators({zindex: 1, suffix: "1"}) //for debugging
+    
+
+    var sceneParallax = new ScrollScene({triggerElement: "#parallax", duration: duration })
+        .setTween(TweenMax.to("#parallax", 1, {backgroundPosition: bgPosMovement(), ease: Linear.easeNone}))
+        .addTo(controllerPar)
+        .addIndicators({zindex: 1, suffix: "2"}); //for debugging
+    
 
     // show indicators (requires debug extension)
     scene.addIndicators();
