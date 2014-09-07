@@ -1,7 +1,8 @@
 body {
-  background: #c7e1ff;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  background: #fafcf6;
+  font-family: 'Lato', sans-serif;
   font-size: 13px;
+  font-weight: 300;
   -webkit-tap-highlight-color: transparent; }
 
 body,
@@ -12,8 +13,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Josefin Slab", serif;
-  font-weight: bold; }
+  font-weight: 300; }
 
 h1 {
   font-style: italic;
@@ -72,7 +72,7 @@ h2 {
   right: 0;
   transform: translateY(100%);
   width: 100%;
-  background: red; }
+  background: #ff832a; }
 
 #slide {
   height: 100%;
@@ -91,11 +91,12 @@ h2 {
   left: 0;
   transform: translateX(-100%);
   width: 100%;
-  background: tan; }
+  background: #23282d;
+  color: #e8ffe4; }
 
 #unpin {
   height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
-  background: maroon; }
+  background: #bed4ec; }
