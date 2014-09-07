@@ -8,6 +8,17 @@ $(document).ready(function() {
         }
     });
 
+    function pathPrepare($el) {
+        var lineLength = $el[0].getTotalLength();
+        $el.css("stroke-dasharray", lineLength);
+        $el.css("stroke-dashoffset", lineLength);
+    }
+
+    var $svg = $("path.svg");
+
+    // prepare SVG
+    pathPrepare($svg);
+
 
     // pinani
     var pinani = new TimelineMax()
@@ -46,8 +57,16 @@ $(document).ready(function() {
         .add(TweenMax.to("#slide-dos", 1, {transform: "translateX(0)"}))
 
         // panel unpinned
-        .add(TweenMax.from("#unpin", .5, {top: "100%"}));
+        .add(TweenMax.from("#unpin", .5, {top: "100%"}))
 
+        // panel unpinned
+        .add(TweenMax.from("#drawsvg", .5, {top: "100%"}))
+
+        // draw svg / draw word for 0.9
+        .add(TweenMax.to($svg, 0.9, {"stroke-dashoffset": 0, ease:Linear.easeNone}))
+
+        // change color during the whole thing
+        .add(TweenMax.to("path", 0.9, {stroke: "#52675d", ease:Linear.easeNone})); 
 
     // panel section pin
     var scene = new ScrollScene({
@@ -70,6 +89,5 @@ $(document).ready(function() {
     // get scroll position
     var scrollPos = controller.info("scrollPos");
 
-    console.log("loglevel + " + loglevel + " und position " + scrollPos); 
 
 });     

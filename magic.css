@@ -58,6 +58,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
+  -webkit-transform: translateY(100%);
   transform: translateY(100%);
   width: 100%;
   background: #2e639e; }
@@ -71,6 +72,7 @@ h2 {
   top: 0;
   right: 0;
   transform: translateY(100%);
+  -webkit-transform: translateY(100%);
   width: 100%;
   background: #ff832a; }
 
@@ -90,6 +92,7 @@ h2 {
   top: 0;
   left: 0;
   transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
   width: 100%;
   background: #23282d;
   color: #e8ffe4; }
@@ -100,3 +103,20 @@ h2 {
   top: 0;
   width: 100%;
   background: #bed4ec; }
+
+#drawsvg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #368194; }
+  #drawsvg svg {
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block; }
+  #drawsvg .svg {
+    stroke: #f4ffec;
+    display: block;
+    fill: rgba(255, 255, 255, 0); }

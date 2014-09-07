@@ -1,72 +1,87 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <title>Scroll Maestro</title>
     <meta name="description" content="" />
-      <meta name="keywords" content="" />
+    <meta name="keywords" content="" />
     <meta name="robots" content="" />
     <link rel="stylesheet" type="text/css" href="magic.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- dependencies -->
+    <script type="text/javascript" src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+
     <!-- use minified version for deployment -->
     <script type="text/javascript" src="js/scrollmagic/jquery.scrollmagic.js"></script>
-    
+
     <!-- for debugging only -->
     <script type="text/javascript" src="js/scrollmagic/jquery.scrollmagic.debug.js"></script>
-    
-    <!-- from scrollMagic Example -->
-    <script type="text/javascript" src="js/scrollmagic/_dependent/greensock/TweenMax.min.js"></script>
-    <script type="text/javascript" src="js/scrollmagic/_dependent/greensock/plugins/ScrollToPlugin.min.js"></script>
-    <script type="text/javascript" src="js/scrollmagic/_dependent/jquery.min.js"></script>
-    <!-- probably not necessary -->
-    <!-- <script type="text/javascript" src="js/scrollmagic/_examples/modernizr.custom.min.js"></script>  -->
-    <!-- <script type="text/javascript" src="js/scrollmagic/_mobile/iscroll-probe.js"></script> -->
-    <!-- <script type="text/javascript" src="js/scrollmagic/jquery.scrollmagic.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/scrollmagic/_examples/demo.js"></script> -->
 
     <script type="text/javascript" src="js/magic.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 
 </head>
+
 <body>
     <div id="content-wrapper">
 
-    <section id="pin" class="scroll-magic-section">
-        <h3 id="hlpin">Start scrolling, Dude</h3>
+        <section id="pin" class="scroll-magic-section">
+            <h3 id="hlpin">Start scrolling, Dude</h3>
 
-        <div id="wipe">
-            <div class="container">
-                <h3>This is the wipe out!</h3>
+            <div id="wipe">
+                <div class="container">
+                    <h3>This is the wipe out!</h3>
+                </div>
             </div>
-        </div>
 
-        <div id="second-wipe">
-            <div class="container">
-                <h3>Bam, hit horizontally</h3>
+            <div id="second-wipe">
+                <div class="container">
+                    <h3>Bam, hit horizontally</h3>
+                </div>
             </div>
-        </div>
 
-        <div id="slide">
-            <div class="container">
-                <h3>Drop ...</h3>
-                <h3>Color Bash</h3>
+            <div id="slide">
+                <div class="container">
+                    <h3>Drop ...</h3>
+                    <h3>Color Bash</h3>
+                </div>
             </div>
-        </div>
-    
-    <div id="slide-dos">
-            <div class="container">
-                <h3>From Left to Right</h3>
-            </div>
-        </div>
 
-        <div id="unpin">
-            <div class="container">
-                <h3>And away ...</h3>
+            <div id="slide-dos">
+                <div class="container">
+                    <h3>From Left to Right</h3>
+                </div>
             </div>
-        </div>
 
-    </section>
-</div>
+            <div id="unpin">
+                <div class="container">
+                    <h3>And away ...</h3>
+                </div>
+            </div>
+
+            <div id="parallax">
+            
+            </div>
+
+            <div id="drawsvg">
+                <div class="container">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320.409px" height="208.158px" viewBox="0 0 320.409 208.158" enable-background="new 0 0 320.409 208.158" xml:space="preserve">
+                        <path class="svg" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M48.937,60.283c0,0,35.461,56.738,35.461,83.688
+    s-20.567,34.752-17.73,14.894s61.702-109.22,61.702-109.22S114.894,92.907,117.73,100s34.752,0.709,35.461,4.255
+    s-49.645-2.127-36.879,19.858s39.716,19.857,40.425,8.51c0.709-11.347-1.418-25.532-1.418-25.532s32.624,4.255,45.39-9.22
+    s24.823-58.865,14.894-47.518s-29.788,70.213-29.078,82.979s26.241,5.673,35.461-5.674s21.277-23.404,30.497-23.404
+    s-17.021,8.511-16.312,15.603s19.858,34.752,22.695,17.73s4.965-29.078,4.965-29.078" />
+                    </svg>
+                </div>
+            </div>
+
+        </section>
+    </div>
 
 </body>
+
 </html>
